@@ -1,0 +1,48 @@
+{
+  "name": "sonus-store-ecommerce-platform",
+  "version": "1.0.0",
+  "description": "A modern, professional e-commerce platform built with vanilla JavaScript",
+  "main": "script.js",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve . -l 3000",
+    "format": "prettier --write \"**/*.{js,css,html,md}\"",
+    "lint:js": "eslint script.js",
+    "lint:css": "stylelint styles.css"
+  },
+  "keywords": [
+    "ecommerce",
+    "shopping-cart",
+    "vanilla-javascript",
+    "responsive-design",
+    "modern-css",
+    "spa",
+    "state-management"
+  ],
+  "author": "SONU's STORE Development Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ecommerce-platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/ecommerce-platform/issues"
+  },
+  "homepage": "https://github.com/yourusername/ecommerce-platform#readme",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "stylelint": "^15.0.0",
+    "serve": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions"
+  ]
+}
+
