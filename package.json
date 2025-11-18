@@ -1,5 +1,5 @@
 {
-  "name": "sonus-store-ecommerce-platform",
+  "name": "ecommerce-store-platform",
   "version": "1.0.0",
   "description": "A modern, professional e-commerce platform built with vanilla JavaScript",
   "main": "script.js",
@@ -19,7 +19,7 @@
     "spa",
     "state-management"
   ],
-  "author": "SONU's STORE Development Team",
+  "author": "Ecommerce Store Development Team",
   "license": "MIT",
   "repository": {
     "type": "git",

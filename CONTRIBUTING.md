@@ -1,4 +1,4 @@
-# Contributing to SONU's STORE E-Commerce Platform
+# Contributing to Ecommerce Store E-Commerce Platform
 
 Thank you for your interest in contributing! This document provides guidelines and best practices for contributing to this project.
 

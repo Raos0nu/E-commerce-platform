@@ -1,11 +1,11 @@
-# SONU's STORE - Premium E-Commerce Platform
+# Ecommerce Store - Premium E-Commerce Platform
 
 A modern, professional e-commerce platform built with vanilla JavaScript, showcasing best practices and advanced web development techniques.
 
 ## ✨ Features
 
 ### Core Functionality
-- **Product Catalog**: Browse a curated selection of premium tech products
+- **Product Catalog**: Browse a curated selection of premium tech products and clothing (95+ products)
 - **Advanced Search**: Real-time search across product names, descriptions, and categories
 - **Smart Filtering**: Filter products by category with instant results
 - **Dynamic Sorting**: Sort by price (ascending/descending) or alphabetically
@@ -29,7 +29,7 @@ A modern, professional e-commerce platform built with vanilla JavaScript, showca
 - Modern web browser (Chrome, Firefox, Safari, Edge)
 - No build tools or dependencies required!
 
-### Running the Application
+### Running the Application Locally
 
 1. **Clone or download** this repository
 
@@ -47,6 +47,68 @@ A modern, professional e-commerce platform built with vanilla JavaScript, showca
 3. **Visit** `http://localhost:8000` (if using a server)
 
 That's it! The application is ready to use.
+
+## 🌐 Deployment on Vercel
+
+This project is ready to deploy on Vercel with zero configuration!
+
+### Option 1: Deploy via Vercel CLI
+
+1. **Install Vercel CLI** (if not already installed):
+   ```bash
+   npm i -g vercel
+   ```
+
+2. **Deploy**:
+   ```bash
+   vercel
+   ```
+
+3. **Follow the prompts** to complete deployment
+
+### Option 2: Deploy via Vercel Dashboard
+
+1. **Push your code to GitHub** (if not already done)
+
+2. **Go to [vercel.com](https://vercel.com)** and sign in
+
+3. **Click "New Project"**
+
+4. **Import your repository**
+
+5. **Configure project**:
+   - Framework Preset: Other
+   - Root Directory: `./`
+   - Build Command: (leave empty)
+   - Output Directory: (leave empty)
+
+6. **Click "Deploy"**
+
+That's it! Your site will be live in seconds.
+
+### Option 3: Deploy via GitHub Integration
+
+1. **Connect your GitHub account** to Vercel
+
+2. **Select your repository**
+
+3. **Vercel will auto-detect** the settings (no configuration needed)
+
+4. **Click "Deploy"**
+
+### Post-Deployment
+
+- Your site will be available at `https://your-project-name.vercel.app`
+- Every push to your main branch will trigger automatic deployments
+- Preview deployments are created for pull requests
+
+### Custom Domain
+
+To add a custom domain:
+1. Go to your project settings on Vercel
+2. Navigate to "Domains"
+3. Add your custom domain
+4. Follow the DNS configuration instructions
 
 ## 📁 Project Structure
 
@@ -104,12 +166,17 @@ class Store {
 
 ## 🎨 Design System
 
-### Color Palette
-- **Primary**: Blue (#2563eb) - Actions and emphasis
-- **Secondary**: Amber (#f59e0b) - Highlights and badges
-- **Success**: Green (#10b981) - Confirmations
-- **Danger**: Red (#ef4444) - Warnings and removals
-- **Neutrals**: Gray scale for UI elements
+### Color Palette - Enchanted Forest Theme
+- **Primary**: Sage Green (#81C784) - Main actions and emphasis
+- **Primary Light**: Muted Sage (#A5D6A7) - Light accents
+- **Primary Pale**: Pastel Green (#C8E6C9) - Subtle backgrounds
+- **Primary Very Pale**: Very Pale Green (#F1F8E9) - Background gradients
+- **Primary Mint**: Pale Mint Green (#E8F5E9) - Soft highlights
+- **Secondary**: Medium Sage Green (#A5D6A7) - Secondary elements
+- **Success**: Green (#66BB6A) - Confirmations
+- **Warning**: Warm Amber (#FFB74D) - Highlights and badges
+- **Danger**: Soft Red (#E57373) - Warnings and removals
+- **Neutrals**: Enchanted Forest grey scale with green undertones
 
 ### Typography
 - **Font Family**: Inter (with system fallbacks)

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Modern e-commerce platform with advanced features and seamless shopping experience" />
-  <title>SONU's STORE - Premium Electronics Store</title>
+  <title>Ecommerce Store - Premium Electronics Store</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
           <rect width="32" height="32" rx="8" fill="currentColor"/>
           <path d="M16 8L24 16L16 24L8 16L16 8Z" fill="white"/>
         </svg>
-        <h1 class="header__title">SONU's STORE</h1>
+        <h1 class="header__title">Ecommerce Store</h1>
       </div>
       
       <nav class="header__nav">
@@ -49,8 +49,85 @@
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="main">
+  <!-- Landing Page Hero Section -->
+  <section class="hero" id="landingPage">
+    <div class="hero__content">
+      <h1 class="hero__title animate-fade-in">
+        <span class="hero__title-main">Ecommerce Store</span>
+        <span class="hero__title-sub">Premium Electronics & Tech</span>
+      </h1>
+      <p class="hero__description animate-fade-in-delay">
+        Discover the latest in technology and fashion with our curated collection of premium electronics, 
+        gaming gear, audio equipment, smart accessories, and trendy clothing.
+      </p>
+      <button id="startShoppingBtn" class="btn btn--primary btn--large hero__cta animate-fade-in-delay-2">
+        <span>Start Shopping</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+    <div class="hero__decoration">
+      <div class="hero__circle hero__circle--1"></div>
+      <div class="hero__circle hero__circle--2"></div>
+      <div class="hero__circle hero__circle--3"></div>
+    </div>
+  </section>
+
+  <!-- Category Tabs Section -->
+  <section class="categories-section" id="categoriesSection" style="display: none;">
+    <div class="categories-container">
+      <h2 class="categories__title">Shop by Category</h2>
+      <div class="categories-tabs">
+        <button class="category-tab active" data-category="all">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+          </svg>
+          <span>All Products</span>
+        </button>
+        <button class="category-tab" data-category="audio">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 1v22M5 6h14M5 18h14"/>
+          </svg>
+          <span>Audio</span>
+        </button>
+        <button class="category-tab" data-category="wearables">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="6"/>
+            <circle cx="12" cy="12" r="2"/>
+          </svg>
+          <span>Wearables</span>
+        </button>
+        <button class="category-tab" data-category="gaming">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <rect x="2" y="7" width="20" height="14" rx="2"/>
+            <path d="M6 7V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/>
+          </svg>
+          <span>Gaming</span>
+        </button>
+        <button class="category-tab" data-category="accessories">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <rect x="3" y="8" width="18" height="12" rx="2"/>
+            <path d="M7 8V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/>
+          </svg>
+          <span>Accessories</span>
+        </button>
+        <button class="category-tab" data-category="clothing">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M20.38 3.46L16 2M4 2l-1.38 1.46M22 8v6a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8M2 8h20M7 8V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/>
+          </svg>
+          <span>Clothing</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content - Products Section -->
+  <main class="main" id="productsSection" style="display: none;">
     <!-- Filters & Controls -->
     <aside class="filters">
       <div class="filters__group">
@@ -60,17 +137,6 @@
           <option value="price-asc">Price: Low to High</option>
           <option value="price-desc">Price: High to Low</option>
           <option value="name">Name: A-Z</option>
-        </select>
-      </div>
-      
-      <div class="filters__group">
-        <label for="categoryFilter" class="filters__label">Category:</label>
-        <select id="categoryFilter" class="filters__select">
-          <option value="all">All Products</option>
-          <option value="audio">Audio</option>
-          <option value="wearables">Wearables</option>
-          <option value="gaming">Gaming</option>
-          <option value="accessories">Accessories</option>
         </select>
       </div>
     </aside>
@@ -94,6 +160,137 @@
       <p class="empty-state__text">No products found</p>
     </div>
   </main>
+
+  <!-- Customer Reviews Section -->
+  <section class="reviews-section" id="reviewsSection">
+    <div class="reviews-container">
+      <h2 class="reviews__title">What Our Customers Say</h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review__stars">★★★★★</div>
+          <p class="review__text">"Amazing quality products and fast delivery! The headphones I bought exceeded my expectations. Great service from the team!"</p>
+          <div class="review__author">
+            <div class="review__avatar">RK</div>
+            <div>
+              <div class="review__name">Rajesh Kumar</div>
+              <div class="review__location">Mumbai, Maharashtra</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review__stars">★★★★★</div>
+          <p class="review__text">"Best shopping experience! Great prices and excellent customer service. The clothes I ordered fit perfectly. Highly recommended!"</p>
+          <div class="review__author">
+            <div class="review__avatar">PS</div>
+            <div>
+              <div class="review__name">Priya Sharma</div>
+              <div class="review__location">Delhi, NCR</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review__stars">★★★★☆</div>
+          <p class="review__text">"Love my new smartwatch! The website is easy to navigate and checkout was smooth. Delivery was on time too!"</p>
+          <div class="review__author">
+            <div class="review__avatar">AP</div>
+            <div>
+              <div class="review__name">Amit Patel</div>
+              <div class="review__location">Ahmedabad, Gujarat</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review__stars">★★★★★</div>
+          <p class="review__text">"Premium products at affordable prices. The gaming gear and t-shirts I purchased are top-notch quality. Will shop again!"</p>
+          <div class="review__author">
+            <div class="review__avatar">SM</div>
+            <div>
+              <div class="review__name">Sneha Menon</div>
+              <div class="review__location">Bangalore, Karnataka</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review__stars">★★★★★</div>
+          <p class="review__text">"Excellent collection of electronics and clothing! The jeans I bought are very comfortable and the audio products are amazing. Great value for money!"</p>
+          <div class="review__author">
+            <div class="review__avatar">VS</div>
+            <div>
+              <div class="review__name">Vikram Singh</div>
+              <div class="review__location">Pune, Maharashtra</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review__stars">★★★★☆</div>
+          <p class="review__text">"Good quality products and reasonable prices. The hoodie I ordered is perfect for winters. Customer support is also very helpful!"</p>
+          <div class="review__author">
+            <div class="review__avatar">AK</div>
+            <div>
+              <div class="review__name">Anjali Kapoor</div>
+              <div class="review__location">Chandigarh, Punjab</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section class="contact-section" id="contactSection">
+    <div class="contact-container">
+      <h2 class="contact__title">Get in Touch</h2>
+      <p class="contact__subtitle">Have questions? We'd love to hear from you!</p>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <div>
+              <h3>Address</h3>
+              <p>123 Tech Street<br>Electronics City<br>Bangalore 560100</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <div>
+              <h3>Phone</h3>
+              <p>+91 98765 43210<br>+91 12345 67890</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <div>
+              <h3>Email</h3>
+              <p>support@ecommercestore.com<br>sales@ecommercestore.com</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="contactName">Name</label>
+            <input type="text" id="contactName" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
   <!-- Cart Modal -->
   <div class="modal" id="cartModal" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
@@ -134,6 +331,158 @@
         </div>
         <button id="checkoutBtn" class="btn btn--primary btn--block">
           Proceed to Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="modal__overlay" id="checkoutOverlay"></div>
+    <div class="modal__content modal__content--large">
+      <div class="modal__header">
+        <h2 id="checkoutTitle" class="modal__title">Checkout</h2>
+        <button id="closeCheckoutBtn" class="modal__close" aria-label="Close checkout">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="modal__body">
+        <form id="checkoutForm" class="checkout-form">
+          <!-- Shipping Address Section -->
+          <div class="checkout-section">
+            <h3 class="checkout-section__title">Shipping Address</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="address">Street Address *</label>
+              <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="city">City *</label>
+                <input type="text" id="city" name="city" required>
+              </div>
+              <div class="form-group">
+                <label for="state">State *</label>
+                <input type="text" id="state" name="state" required>
+              </div>
+              <div class="form-group">
+                <label for="zipCode">ZIP Code *</label>
+                <input type="text" id="zipCode" name="zipCode" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="country">Country *</label>
+              <input type="text" id="country" name="country" value="India" required>
+            </div>
+          </div>
+
+          <!-- Payment Method Section -->
+          <div class="checkout-section">
+            <h3 class="checkout-section__title">Payment Method</h3>
+            <div class="payment-methods">
+              <label class="payment-method">
+                <input type="radio" name="paymentMethod" value="credit-card" checked>
+                <div class="payment-method__content">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                    <line x1="1" y1="10" x2="23" y2="10"/>
+                  </svg>
+                  <span>Credit/Debit Card</span>
+                </div>
+              </label>
+              <label class="payment-method">
+                <input type="radio" name="paymentMethod" value="upi">
+                <div class="payment-method__content">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <rect x="2" y="7" width="20" height="14" rx="2"/>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                  </svg>
+                  <span>UPI</span>
+                </div>
+              </label>
+              <label class="payment-method">
+                <input type="radio" name="paymentMethod" value="netbanking">
+                <div class="payment-method__content">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                    <path d="M6 8h12M6 12h12M6 16h8"/>
+                  </svg>
+                  <span>Net Banking</span>
+                </div>
+              </label>
+              <label class="payment-method">
+                <input type="radio" name="paymentMethod" value="cod">
+                <div class="payment-method__content">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  <span>Cash on Delivery</span>
+                </div>
+              </label>
+            </div>
+
+            <!-- Card Details (shown when credit card is selected) -->
+            <div id="cardDetails" class="card-details">
+              <div class="form-group">
+                <label for="cardNumber">Card Number *</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="expiryDate">Expiry Date *</label>
+                  <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5">
+                </div>
+                <div class="form-group">
+                  <label for="cvv">CVV *</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="cardName">Name on Card *</label>
+                <input type="text" id="cardName" name="cardName">
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Summary -->
+          <div class="checkout-section">
+            <h3 class="checkout-section__title">Order Summary</h3>
+            <div id="checkoutSummary" class="checkout-summary"></div>
+            <div class="checkout-total">
+              <div class="checkout-total__row">
+                <span>Subtotal:</span>
+                <span id="checkoutSubtotal">₹0</span>
+              </div>
+              <div class="checkout-total__row">
+                <span>Shipping:</span>
+                <span>₹99</span>
+              </div>
+              <div class="checkout-total__row checkout-total__row--final">
+                <span>Total:</span>
+                <span id="checkoutTotal">₹0</span>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      
+      <div class="modal__footer">
+        <button id="placeOrderBtn" class="btn btn--primary btn--block">
+          Place Order
         </button>
       </div>
     </div>
